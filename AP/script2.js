@@ -17,7 +17,7 @@ function hadirAbsen(){
     var user = $('#halo').text();
     // console.log(token);
     // console.log(user);
-    return firebase.database().ref('absensi/' + user).once('value').then(function(snapshot) {
+    return firebase.database().ref('absensi/' + user +'/token').once('value').then(function(snapshot) {
         var palu = (snapshot.val());
         // console.log(palu);
         if (palu == token) {
